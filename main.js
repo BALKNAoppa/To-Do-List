@@ -16,14 +16,16 @@ function addTask() {
       </div>
     `;
     todoList.appendChild(li);
-    taskInput.value = '';
+    taskInput.value = ''; // Clear input
   }
 
   function moveTask(button, targetListId) {
     const li = button.parentElement.parentElement;
     const targetList = document.getElementById(targetListId);
 
-    li.querySelector('.task-buttons').innerHTML = getTaskButtons(targetListId);
+    // Determine new task buttons based on the target list
+    const newButtons = getTaskButtons(targetListId);
+    li.querySelector('.task-buttons').innerHTML = newButtons;
     targetList.appendChild(li);
   }
 
