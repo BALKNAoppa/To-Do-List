@@ -1,17 +1,17 @@
 body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(45deg, white, black, red, yellow);
+    background: linear-gradient(45deg,#beffe9, #FFB6C6, #85f3cd, #fde4e3);
     background-size: 300% 300%;
     animation: gradientAnimation 8s ease infinite;
     font-family: Manrope;
+    font-weight: 900;
 }
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
 .main-container{
     width: 100vw;
     height: 100vh;
@@ -29,7 +29,6 @@ h1 {
     color: black;
   }
   .input-container {
-    display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
@@ -37,18 +36,21 @@ input[type="text"] {
     width: calc(100% - 110px);
     padding: 10px;
     margin-right: 10px;
-    border: 1px solid grey;
+
     border-radius: 4px;
     background-color: transparent;
+    font-size: 15px;
   }
 button {
     padding: 10px;
     background-color: #5cb85c;
-    color: white;
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    font-family: Manrope;
+    font-weight: 800;
   }
 button:hover {
     background-color: #4cae4c;
@@ -73,13 +75,14 @@ ul {
     background-color: transparent;
   }
 li {
-    background: #fff;
+    background:transparent;
     margin: 5px 0;
     padding: 10px;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px grey solid;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 .task-buttons button {
@@ -98,35 +101,22 @@ li {
 .delete-btn:hover {
     background-color: #c9302c;
   }
-
-  .keybaord{
+.keybaord{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  body {
-    background-color: #101013;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-  }
-  
-  
-  .key {
+
+.key {
     font-size: 5vw;
     display: inline-block;
     transition: transform 0.2s;
   }
-  
-  
-  
-  @keyframes pressDown1 {
+
+/*press animation*/
+
+@keyframes pressDown1 {
     30%,
     40%,
     100% {
@@ -246,42 +236,4 @@ li {
   
   .key:nth-child(8) {
     animation: pressDown8 3.2s infinite;
-  }
-  
-  
-  
-  
-  /* extra stuff */
-  .jux-linx {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-  }
-  a {
-    text-decoration: none;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: white;
-    background-color: black;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-    padding: 5px 10px;
-    transition: 0.1s all ease-in;
-  }
-  
-  a:nth-child(1):hover {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0px 2px 0 #349eff;
-  }
-  
-  a:nth-child(2):hover {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0px 2px 0 #ff5757;
   }
