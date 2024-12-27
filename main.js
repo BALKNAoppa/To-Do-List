@@ -1,3 +1,6 @@
+
+
+// Add Task
 function addTask() {
   const taskInput = document.getElementById('taskInput');
   const prioritySelect = document.getElementById('prioritySelect');
@@ -5,35 +8,33 @@ function addTask() {
   const todoList = document.getElementById('todoList');
 
   if (taskInput.value.trim() === '') {
-      alert('Please enter a task');
+      alert('Ямар нэгэн юм бичээчээ');
       return;
   }
   if (!taskDate.value) {
-      alert('Please select a date');
+      alert('Хэзээ хийж дуусгахаа бичээчээ');
       return;
   }
 
-  // Create a new task item
+  // Create task
   const li = document.createElement('li');
-  li.setAttribute('data-priority', prioritySelect.value); // Set priority as a data attribute
+  li.setAttribute('data-priority', prioritySelect.value); // Set priority
   li.innerHTML = `
       <span class="task-text">${taskInput.value}</span>
       <span class="task-priority">[Priority: ${prioritySelect.value}]</span>
-      <span class="task-datetime">[Date: ${taskDate.value}</span>
+      <span class="task-datetime">[Due Date: ${taskDate.value}</span>
       <div class="task-buttons">
           <button class="move-btn" onclick="moveTask(this, 'inProgressList')">In Progress</button>
           <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
       </div>
   `;
 
-  // Append to the To-Do list
   todoList.appendChild(li);
-  sortTasks(todoList); // Sort tasks by priority
+  sortTasks(todoList);
 
-  // Clear input fields
+  
   taskInput.value = '';
   taskDate.value = '';
-  taskTime.value = '';
 }
 
 function moveTask(button, targetListId) {
@@ -59,7 +60,7 @@ function getTaskButtons(listId) {
   } else if (listId === 'inProgressList') {
       return `
           <button class="move-btn" onclick="moveTask(this, 'todoList')">To-Do</button>
-          <button class="move-btn" onclick="moveTask(this, 'doneList')">Done</button>
+          <button class="move-btn-done" onclick="moveTask(this, 'doneList')">Done</button>
           <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
       `;
   } else if (listId === 'doneList') {

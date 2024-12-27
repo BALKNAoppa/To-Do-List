@@ -36,7 +36,6 @@ input[type="text"] {
     width: calc(100% - 110px);
     padding: 10px;
     margin-right: 10px;
-
     border-radius: 4px;
     background-color: transparent;
     font-size: 15px;
@@ -73,6 +72,8 @@ ul {
     border-radius: 4px;
     padding: 10px;
     background-color: transparent;
+    font-size: 14px;
+    font-weight: normal;
   }
 li {
     background:transparent;
@@ -82,13 +83,13 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px grey solid;
+    border: 1px red solid;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 .task-buttons button {
     margin-left: 5px;
     padding: 5px 8px;
-  }
+  } 
 .move-btn {
     background-color: #007bff;
   }
@@ -114,7 +115,7 @@ li {
     transition: transform 0.2s;
   }
 
-/*press animation*/
+/*press animation of TITILE*/
 
 @keyframes pressDown1 {
     30%,
@@ -237,3 +238,48 @@ li {
   .key:nth-child(8) {
     animation: pressDown8 3.2s infinite;
   }
+  #prioritySelect {
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+  }
+  .title-container{
+    width: 1500px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.main-input-container{
+  display: flex;
+}
+
+
+.task-text {
+  font-size: 15px;
+  color: green;
+}
+
+.move-btn-done{
+  background-color: green;
+}
+.task-section{
+  display: flex;
+  justify-content: space-around;
+}
+
+#date-input{
+  background: transparent;
+  outline: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
+}
+
+.taskInput{
+  width: 400px;
+  height: 100px;
+  border: 1px solid red;
+}
